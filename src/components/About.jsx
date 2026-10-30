@@ -1,10 +1,11 @@
+
 import { motion } from "framer-motion";
 
 function About() {
   const stats = [
-    { value: "3+", label: "Projects" },
-    { value: "3", label: "Publications" },
-    { value: "AI & ML + Web", label: "Focus Area" },
+    { value: "2+", label: "UI Projects" },
+    { value: "UI/UX", label: "Focus Area" },
+    { value: "React", label: "Frontend" },
     { value: "2027", label: "Graduation" },
   ];
 
@@ -17,7 +18,6 @@ function About() {
       viewport={{ once: true }}
       className="max-w-6xl mx-auto px-8 py-24"
     >
-      {/* Heading */}
       <motion.h2
         initial={{ opacity: 0, x: -40 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -28,7 +28,6 @@ function About() {
         About Me
       </motion.h2>
 
-      {/* About Card */}
       <motion.div
         initial={{ opacity: 0, scale: 0.97 }}
         whileInView={{ opacity: 1, scale: 1 }}
@@ -42,17 +41,17 @@ function About() {
             Kamali
           </span>
           , a B.Tech Artificial Intelligence and Machine Learning
-          student at Sri Shakthi Institute of Engineering and Technology.
+          student with an interest in UI/UX Design and Frontend Development.
         </p>
 
         <p className="text-gray-300 leading-8 mt-6">
-          I enjoy building responsive web applications and developing
-          AI-powered solutions using Python and Machine Learning.
-          I'm interested in Web Development, AI, Machine Learning,
-          and solving real-world problems through technology.
+          I enjoy creating clean, attractive, and user-friendly
+          interfaces. I focus on visual hierarchy, layouts,
+          responsive design, and smooth user experiences.
+          I love turning ideas into meaningful digital experiences
+          through creative design and frontend development.
         </p>
 
-        {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-10">
           {stats.map((stat, index) => (
             <motion.div
@@ -64,10 +63,7 @@ function About() {
                 delay: index * 0.15,
               }}
               viewport={{ once: true }}
-              whileHover={{
-                y: -8,
-                scale: 1.03,
-              }}
+              whileHover={{ y: -8, scale: 1.03 }}
               className="bg-slate-800/60 backdrop-blur-sm border border-cyan-400/10 p-5 rounded-xl text-center hover:border-cyan-400/30 hover:shadow-lg hover:shadow-cyan-500/10 transition duration-300"
             >
               <h3 className="text-2xl font-bold text-cyan-400">

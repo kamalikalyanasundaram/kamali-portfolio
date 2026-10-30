@@ -1,12 +1,16 @@
+
 import {
+  FaPalette,
+  FaPenRuler,
+  FaLayerGroup,
+  FaMobileAlt,
+  FaSitemap,
   FaHtml5,
   FaCss3Alt,
   FaJs,
   FaReact,
-  FaNodeJs,
-  FaPython,
-  FaGitAlt,
   FaGithub,
+  FaGitAlt,
 } from "react-icons/fa";
 
 import { motion } from "framer-motion";
@@ -14,11 +18,35 @@ import { motion } from "framer-motion";
 function Skills() {
   const skills = [
     {
-      name: "HTML",
+      name: "UI Design",
+      icon: <FaPalette className="text-pink-400" />,
+    },
+    {
+      name: "UX Principles",
+      icon: <FaLayerGroup className="text-purple-400" />,
+    },
+    {
+      name: "Wireframing",
+      icon: <FaPenRuler className="text-orange-400" />,
+    },
+    {
+      name: "User Flow Design",
+      icon: <FaSitemap className="text-green-400" />,
+    },
+    {
+      name: "Visual Hierarchy",
+      icon: "🎨",
+    },
+    {
+      name: "Responsive Design",
+      icon: <FaMobileAlt className="text-cyan-400" />,
+    },
+    {
+      name: "HTML5",
       icon: <FaHtml5 className="text-orange-500" />,
     },
     {
-      name: "CSS",
+      name: "CSS3",
       icon: <FaCss3Alt className="text-blue-500" />,
     },
     {
@@ -26,16 +54,8 @@ function Skills() {
       icon: <FaJs className="text-yellow-400" />,
     },
     {
-      name: "React",
+      name: "React.js",
       icon: <FaReact className="text-cyan-400" />,
-    },
-    {
-      name: "Node.js",
-      icon: <FaNodeJs className="text-green-500" />,
-    },
-    {
-      name: "Python",
-      icon: <FaPython className="text-blue-400" />,
     },
     {
       name: "Git",
@@ -44,22 +64,6 @@ function Skills() {
     {
       name: "GitHub",
       icon: <FaGithub className="text-white" />,
-    },
-    {
-      name: "Machine Learning",
-      icon: "🤖",
-    },
-    {
-      name: "Express",
-      icon: "⚡",
-    },
-    {
-      name: "MySQL",
-      icon: "🗄️",
-    },
-    {
-      name: "MongoDB",
-      icon: "🍃",
     },
   ];
 
@@ -72,7 +76,6 @@ function Skills() {
       viewport={{ once: true }}
       className="max-w-6xl mx-auto px-8 py-24"
     >
-      {/* Heading */}
       <motion.h2
         initial={{ opacity: 0, x: -40 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -80,10 +83,9 @@ function Skills() {
         viewport={{ once: true }}
         className="text-4xl font-bold text-cyan-400 mb-4"
       >
-        Skills
+        My Skills
       </motion.h2>
 
-      {/* Description */}
       <motion.p
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -91,11 +93,10 @@ function Skills() {
         viewport={{ once: true }}
         className="text-gray-400 mb-12"
       >
-        Technologies and tools I use to build web applications
-        and AI-powered solutions.
+        Design concepts and frontend technologies I use to
+        create attractive, intuitive, and responsive user interfaces.
       </motion.p>
 
-      {/* Skills */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {skills.map((skill, index) => (
           <motion.div

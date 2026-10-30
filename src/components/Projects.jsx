@@ -1,7 +1,8 @@
+
 import {
   FaMapMarkedAlt,
-  FaLeaf,
-  FaHandPaper,
+  FaGraduationCap,
+  FaShoppingCart,
 } from "react-icons/fa";
 
 import { motion } from "framer-motion";
@@ -18,18 +19,20 @@ function Projects() {
       demo: "https://youtu.be/lIFn587tX74",
     },
     {
-      title: "Organic Fertilizer Recommendation",
+      title: "CampusConnect",
       description:
-        "ML based system to predict plant diseases and recommend suitable organic fertilizers.",
-      tech: "Python • Machine Learning • HTML • CSS",
-      icon: <FaLeaf />,
+        "A student platform for internships, job opportunities, and placement preparation.",
+      tech: "React.js • JavaScript • Tailwind CSS • Framer Motion • Lucide React",
+      icon: <FaGraduationCap />,
+      github: "https://github.com/kamalikalyanasundaram/campusconnect",
     },
     {
-      title: "Sign Language Virtual ATM",
+      title: "FreshCart",
       description:
-        "Virtual ATM using Computer Vision and Deep Learning for contactless banking.",
-      tech: "CNN • MediaPipe • TensorFlow",
-      icon: <FaHandPaper />,
+        "A modern grocery shopping platform with product discovery, cart, and checkout features.",
+      tech: "React.js • Vite • JavaScript • Tailwind CSS • React Router • Framer Motion • Lucide React",
+      icon: <FaShoppingCart />,
+      github: "https://github.com/kamalikalyanasundaram/FreshCart",
     },
   ];
 
@@ -47,7 +50,6 @@ function Projects() {
       </h2>
 
       <div className="grid md:grid-cols-3 gap-8">
-
         {projects.map((project) => (
           <motion.div
             key={project.title}
@@ -57,7 +59,6 @@ function Projects() {
             viewport={{ once: true }}
             className="bg-slate-900/60 backdrop-blur-md border border-cyan-400/10 rounded-2xl p-8 hover:-translate-y-2 hover:border-cyan-400/40 hover:shadow-2xl hover:shadow-cyan-500/10 transition duration-300"
           >
-
             {/* Icon */}
             <div className="text-4xl mb-4 text-cyan-400">
               {project.icon}
@@ -87,8 +88,6 @@ function Projects() {
 
             {/* Buttons */}
             <div className="flex gap-3 mt-8">
-
-              {/* GitHub */}
               {project.github && (
                 <a
                   href={project.github}
@@ -100,26 +99,19 @@ function Projects() {
                 </a>
               )}
 
-              {/* Live Demo */}
               {project.demo && (
                 <a
-  href={project.demo}
-  target="_blank"
-  rel="noopener noreferrer"
-  className="border border-cyan-400 text-cyan-400 px-5 py-2 rounded-lg font-semibold
-             hover:bg-cyan-400 hover:text-black
-             hover:shadow-[0_0_20px_rgba(34,211,238,0.7)]
-             transition-all duration-300"
->
-  Live Demo
-</a>
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="border border-cyan-400 text-cyan-400 px-5 py-2 rounded-lg font-semibold hover:bg-cyan-400 hover:text-black hover:shadow-[0_0_20px_rgba(34,211,238,0.7)] transition-all duration-300"
+                >
+                  Live Demo
+                </a>
               )}
-
             </div>
-
           </motion.div>
         ))}
-
       </div>
     </motion.section>
   );
