@@ -1,7 +1,6 @@
-
 import {
   FaPalette,
-  FaPenRuler,
+  FaPencilAlt,
   FaLayerGroup,
   FaMobileAlt,
   FaSitemap,
@@ -27,7 +26,7 @@ function Skills() {
     },
     {
       name: "Wireframing",
-      icon: <FaPenRuler className="text-orange-400" />,
+      icon: <FaPencilAlt className="text-orange-400" />,
     },
     {
       name: "User Flow Design",
