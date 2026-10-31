@@ -77,7 +77,7 @@ function Hero() {
               sequence={[
                 "AI & ML Student",
                 2000,
-                "Aspiring Full Stack Developer",
+                "Aspiring UI/UX Designer",
                 2000,
                 "Machine Learning Enthusiast",
                 2000,
@@ -94,9 +94,9 @@ function Hero() {
             transition={{ delay: 1.2, duration: 0.8 }}
             className="mt-8 text-gray-400 leading-8 max-w-xl"
           >
-            Passionate about building modern web applications, exploring
-            Artificial Intelligence and Machine Learning, and solving
-            real-world problems through technology.
+            Passionate about creating visually appealing, user-friendly interfaces, 
+            exploring UI/UX design principles, 
+            and designing meaningful digital experiences that solve real-world problems.
           </motion.p>
 
           {/* BUTTONS */}
